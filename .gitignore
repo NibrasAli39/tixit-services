@@ -1,0 +1,46 @@
+# Ignore node_modules
+node_modules/
+
+# Ignore Serverless build artifacts
+.serverless/
+.webpack/
+
+# Ignore local environment variable files
+.env
+.env.*
+
+# Ignore TypeScript build artifacts
+dist/
+build/
+out/
+
+# Ignore TypeScript cache
+*.tsbuildinfo
+
+# Ignore log files
+*.log
+
+# Ignore temporary files created by your editor/IDE
+*.swp
+*.swo
+*.DS_Store
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# Ignore coverage reports
+coverage/
+
+# Ignore npm package lock
+package-lock.json
+
+# Ignore yarn lock file
+yarn.lock
+
+# Ignore JetBrains IDEs
+*.iml
+.idea/
+
+# Ignore AWS credentials and config (if used)
+.aws/
