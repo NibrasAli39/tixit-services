@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../src/handler.ts"],
+  "sourcesContent": ["import { APIGatewayProxyHandler } from \"aws-lambda\";\n\nexport const hello: APIGatewayProxyHandler = async (event) => {\n  return {\n    statusCode: 200,\n    body: JSON.stringify(\n      {\n        message: \"Hello from TypeScript with Serverless v4!\",\n        input: event,\n      },\n      null,\n      2\n    ),\n  };\n};\n"],
+  "mappings": "yaAAA,IAAAA,EAAA,GAAAC,EAAAD,EAAA,WAAAE,IAAA,eAAAC,EAAAH,GAEO,IAAME,EAAgC,MAAOE,IAC3C,CACL,WAAY,IACZ,KAAM,KAAK,UACT,CACE,QAAS,4CACT,MAAOA,CACT,EACA,KACA,CACF,CACF",
+  "names": ["handler_exports", "__export", "hello", "__toCommonJS", "event"]
+}

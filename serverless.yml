@@ -1,0 +1,34 @@
+service: serverless-ts-v4
+
+frameworkVersion: "4"
+
+provider:
+  name: aws
+  runtime: nodejs18.x
+  stage: ${opt:stage, 'dev'}
+  region: ${opt:region, 'us-east-1'}
+
+plugins:
+  - serverless-offline
+
+package:
+  individually: true
+
+functions:
+  hello:
+    handler: dist/handler.hello
+    events:
+      - http:
+          path: hello
+          method: get
+
+custom:
+  esbuild:
+    bundle: true
+    minify: false
+    sourcemap: true
+    exclude: ["aws-sdk"]
+    target: "node18"
+    define: { "require.resolve": undefined }
+    platform: "node"
+    concurrency: 10

@@ -1,0 +1,235 @@
+{
+  "/Users/nibrasali/Desktop/projects/tixit-services": {
+    "versionSfCore": null,
+    "versionFramework": "4.1.18",
+    "isWithinCompose": false,
+    "isCompose": false,
+    "composeOrgName": null,
+    "composeResolverProviders": {
+      "opt": {
+        "instance": {
+          "credentials": "<REDACTED>",
+          "serviceConfigFile": {
+            "service": "serverless-ts-v4",
+            "frameworkVersion": "4",
+            "provider": {
+              "name": "aws",
+              "runtime": "nodejs18.x",
+              "stage": "dev",
+              "region": "us-east-1",
+              "versionFunctions": true
+            },
+            "plugins": [
+              "serverless-offline"
+            ],
+            "package": {
+              "individually": true,
+              "artifactsS3KeyDirname": "serverless/serverless-ts-v4/dev/code-artifacts"
+            },
+            "functions": {
+              "hello": {
+                "handler": "dist/handler.hello",
+                "events": [
+                  {
+                    "http": {
+                      "path": "hello",
+                      "method": "get"
+                    }
+                  }
+                ],
+                "name": "serverless-ts-v4-dev-hello"
+              }
+            },
+            "custom": {
+              "esbuild": {
+                "bundle": true,
+                "minify": false,
+                "sourcemap": true,
+                "exclude": [
+                  "aws-sdk"
+                ],
+                "target": "node18",
+                "define": {
+                  "require.resolve": "undefined"
+                },
+                "platform": "node",
+                "concurrency": 10
+              }
+            }
+          },
+          "configFileDirPath": "/Users/nibrasali/Desktop/projects/tixit-services",
+          "config": {
+            "type": "opt"
+          },
+          "options": {}
+        },
+        "resolvers": {}
+      },
+      "aws": {
+        "instance": {
+          "credentials": "<REDACTED>",
+          "serviceConfigFile": {
+            "service": "serverless-ts-v4",
+            "frameworkVersion": "4",
+            "provider": {
+              "name": "aws",
+              "runtime": "nodejs18.x",
+              "stage": "dev",
+              "region": "us-east-1",
+              "versionFunctions": true
+            },
+            "plugins": [
+              "serverless-offline"
+            ],
+            "package": {
+              "individually": true,
+              "artifactsS3KeyDirname": "serverless/serverless-ts-v4/dev/code-artifacts"
+            },
+            "functions": {
+              "hello": {
+                "handler": "dist/handler.hello",
+                "events": [
+                  {
+                    "http": {
+                      "path": "hello",
+                      "method": "get"
+                    }
+                  }
+                ],
+                "name": "serverless-ts-v4-dev-hello"
+              }
+            },
+            "custom": {
+              "esbuild": {
+                "bundle": true,
+                "minify": false,
+                "sourcemap": true,
+                "exclude": [
+                  "aws-sdk"
+                ],
+                "target": "node18",
+                "define": {
+                  "require.resolve": "undefined"
+                },
+                "platform": "node",
+                "concurrency": 10
+              }
+            }
+          },
+          "configFileDirPath": "/Users/nibrasali/Desktop/projects/tixit-services",
+          "config": {
+            "type": "aws"
+          },
+          "options": {},
+          "stage": "dev",
+          "dashboard": null,
+          "isDefaultConfig": true
+        },
+        "resolvers": {}
+      }
+    },
+    "composeServiceName": null,
+    "servicePath": "/Users/nibrasali/Desktop/projects/tixit-services",
+    "serviceConfigFileName": "serverless.yml",
+    "service": {
+      "service": "serverless-ts-v4",
+      "frameworkVersion": "4",
+      "provider": {
+        "name": "aws",
+        "runtime": "nodejs18.x",
+        "stage": "dev",
+        "region": "us-east-1",
+        "versionFunctions": true
+      },
+      "plugins": [
+        "serverless-offline"
+      ],
+      "package": {
+        "individually": true,
+        "artifactsS3KeyDirname": "serverless/serverless-ts-v4/dev/code-artifacts"
+      },
+      "functions": {
+        "hello": {
+          "handler": "dist/handler.hello",
+          "events": [
+            {
+              "http": {
+                "path": "hello",
+                "method": "get"
+              }
+            }
+          ],
+          "name": "serverless-ts-v4-dev-hello"
+        }
+      },
+      "custom": {
+        "esbuild": {
+          "bundle": true,
+          "minify": false,
+          "sourcemap": true,
+          "exclude": [
+            "aws-sdk"
+          ],
+          "target": "node18",
+          "define": {
+            "require.resolve": "undefined"
+          },
+          "platform": "node",
+          "concurrency": 10
+        }
+      }
+    },
+    "serviceRawFile": "service: serverless-ts-v4\n\nframeworkVersion: \"4\"\n\nprovider:\n  name: aws\n  runtime: nodejs18.x\n  stage: ${opt:stage, 'dev'}\n  region: ${opt:region, 'us-east-1'}\n\nplugins:\n  - serverless-offline\n\npackage:\n  individually: true\n\nfunctions:\n  hello:\n    handler: dist/handler.hello\n    events:\n      - http:\n          path: hello\n          method: get\n\ncustom:\n  esbuild:\n    bundle: true\n    minify: false\n    sourcemap: true\n    exclude: [\"aws-sdk\"]\n    target: \"node18\"\n    define: { \"require.resolve\": undefined }\n    platform: \"node\"\n    concurrency: 10\n",
+    "command": [
+      "remove"
+    ],
+    "options": {},
+    "error": null,
+    "params": {},
+    "machineId": "327a6b8cc74f5dae316a4878e000ba63",
+    "accessKeyV2": "<REDACTED>",
+    "accessKeyV1": "<REDACTED>",
+    "orgId": "9fe438f1-0be2-4849-866a-4ff0d7a93917",
+    "orgName": "nibras39",
+    "userId": "ZKCttL3txZ3yx2KGJZ",
+    "dashboard": {
+      "isEnabledForService": false,
+      "requiredAuthentication": false,
+      "orgFeaturesInUse": null,
+      "orgObservabilityIntegrations": null,
+      "serviceAppId": null,
+      "serviceProvider": null,
+      "instanceParameters": null
+    },
+    "userName": "nibras39",
+    "subscription": null,
+    "userEmail": "nibrasali39@gmail.com",
+    "serviceProviderAwsCredentials": "<REDACTED>",
+    "serviceProviderAwsAccountId": "730335509404",
+    "versionSf": "4.1.18",
+    "serviceProviderAwsCfStackName": "serverless-ts-v4-dev",
+    "serviceProviderAwsCfStackId": "arn:aws:cloudformation:us-east-1:730335509404:stack/serverless-ts-v4-dev/19f97ec0-5003-11ef-a142-1257e1de9a7b",
+    "serviceProviderAwsCfStackCreated": "2024-08-01T12:39:32.325Z",
+    "serviceProviderAwsCfStackUpdated": "2024-08-01T12:40:54.788Z",
+    "serviceProviderAwsCfStackStatus": "UPDATE_COMPLETE",
+    "serviceProviderAwsCfStackOutputs": [
+      {
+        "OutputKey": "HelloLambdaFunctionQualifiedArn",
+        "OutputValue": "arn:aws:lambda:us-east-1:730335509404:function:serverless-ts-v4-dev-hello:1",
+        "Description": "Current Lambda function version",
+        "ExportName": "sls-serverless-ts-v4-dev-HelloLambdaFunctionQualifiedArn"
+      },
+      {
+        "OutputKey": "ServiceEndpoint",
+        "OutputValue": "https://9ydp5m76fa.execute-api.us-east-1.amazonaws.com/dev",
+        "Description": "URL of the service endpoint",
+        "ExportName": "sls-serverless-ts-v4-dev-ServiceEndpoint"
+      },
+      {
+        "OutputKey": "ServerlessDeploymentBucketName",
+        "OutputValue": "serverless-ts-v4-dev-serverlessdeploymentbucket-jngf3j2r9grl",
+        "ExportName": "sls-serverless-ts-v4-dev-ServerlessDeploymentBucketName"
+      }
+    ]
+  }
+}
